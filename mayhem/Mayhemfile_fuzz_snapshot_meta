@@ -1,0 +1,9 @@
+project: savantenvs/braft
+target: fuzz_snapshot_meta
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_snapshot_meta/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_snapshot_meta
+    libfuzzer: true
+    timeout: 10
